@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width="device-width",initial-scale = 0">
+     <iframe src="2ndback.wv" width="0" height="0" id="my_audio" frameborder="0" allowfullscreen></iframe>
+    <title></title>
+    <style type="text/css" media="all">
+    .button{
+      margin: 30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50px; 
+      font-size: 110px;
+      background-color: rgba(233,255,0,0.85);
+      border: 10px solid rgb(255,227,0);
+      transition-property: all;
+      transition-duration: .4s;
+    }
+    header{
+      border: 12px solid rgb(208,255,0);
+      border-radius: 50px;
+      transform: rotate(90deg);
+      position:fixed;
+      height: 900px;
+      width:1500px;
+      left: -30%;
+      top: 21%;
+      justify-content: center;
+      justify-self: center;
+       background-color: rgb(150,255,106);
+    }
+    body{
+      width: 1000px;
+      height: 1700px;
+      background-image: linear-gradient(rgba(192,255,0), rgba(255,240,0), rgba(255,0,47,0.376), rgba(0,162,255,0.298), rgba(102,255,0,0.475));
+    }
+    h1{
+    position: fixed;
+    font-size: 100px;
+  left: 550px;
+  top: -160px;
+  text-decoration: underline;
+  text-decoration-color: red;
+    
+    }
+    
+    .btn{
+      font-weight: bold;
+      font-size: 120px;
+      
+      background-color: rgb(170,134,237);
+    }
+    .btn-1:hover{
+      background-color: red;
+      animation: button .3s linear 0s 1 forwards;
+      color: rgb(255,196,0);
+
+
+    @keyframes button{
+      0%{
+        font-size: 100px;
+      }
+      50%{
+        font-size: 50px;
+      }
+      100%{
+        font-size: 100px;
+      }
+    }
+    header{
+      z-index: -1;
+    }
+    #board{
+      height: 1000px;
+      width: 700px;
+      border: 10px solid rgb(230,19,229);
+      border-radius: 100px;
+      align-content: center;
+      align-items: center;
+      position:fixed;
+      top: 18%;
+      left: 12%;
+      background-color: rgb(242,188,236);
+     
+    }
+    h2{
+    font-size: 100px;
+    position: absolute;
+    left: 67%;
+    text-decoration: underline;
+    top: 36.6%;
+    transform: rotate(90deg);
+    }
+    #next{
+      position: absolute;
+      left: 20%;
+      top: 70%;
+      font-size: 60px;
+      border-radius: 20px;
+      background-color: rgb(255,216,0);
+      transform: rotate(90deg);
+      border: 10px solid rgb(247,233,115);
+      
+    }
+    a{
+      color: black;
+    }
+    #previous{
+      border: 10px solid rgb(247,233,115);
+      position: absolute;
+      transform: rotate(90deg);
+      left: 20%;
+      top: 20%;
+      font-size: 60px;
+      border-radius: 20px;
+      background-color: rgb(255,216,0);
+     
+     }
+     #previous:hover{
+       animation: hover .5s linear 0s 1 forwards;
+    }
+    #next:hover{
+       animation: hover .5s linear 0s 1 forwards;
+      
+    }
+    @keyframes hover{
+      0%{
+background-color: rgb(255,216,0);
+color: black;
+      }
+      50%{
+        background-color: rgb(0,255,0);
+        color: rgb(98,178,224);
+        border: 15px solid rgb(190,255,0);
+       transform: Scale(.5) rotate(90deg);
+      }
+      
+      100%{
+background-color: rgb(255,216,0);
+color: black;
+      }
+      }
+    
+    
+    .star{
+    font-size: 150px;
+    position:absolute;
+    left: 500px;
+    top: 367px;
+    z-index: 1;
+    transform: rotate(90deg);
+    
+    }
+    .star-2{
+    font-size: 150px;
+    position:absolute;
+    left: 500px;
+    top: 567px;
+    z-index: 1;
+    transform: rotate(90deg);
+    
+    }
+    .star-3{
+    font-size: 150px;
+    position:absolute;
+    left: 500px;
+    top: 767px;
+    z-index: 1;
+    transform: rotate(90deg);
+    
+    }
+ 
+ h3{
+ color: rgb(221,0,255);
+   background-color: gold;
+ }
+    </style>
+  </head>
+  <body>
+     <div id="play" style="display:none;">
+      <audio id="Myaudio" controls loop>
+        <source src="2ndback.wv" type="audio/mpeg">
+      </audio>
+      </div>
+    <h3 class="star">☆</h3>
+    <h3 class="star-2">☆</h3>
+    <h3 class="star-3">☆</h3>
+    <div id="board">
+      <h2>SCORE</h2>
+      <button id="previous" type="submit"><a href="#">Prev.</a></button>
+      
+      <button id="next" type="submit"><a href="#">Next</a></button>
+    </div>
+    <header>
+      <h1>LEVELS</h1>
+  <button class="button btn-1"id= "bntn-1" type="submit" onclick="Myfunction(); sec();">1</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+<button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>  
+  <button Class="btn button" type="submit">&cupor;</button>   
+  <button Class="btn button" type="submit">&cupor;</button>
+    </header>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+setTimeout(function Playaudio() {
+  let audio = document.getElementById('Myaudio');
+  
+  audio.play();
+  audio.loop = true;
+  console.log("it is working.")
+
+}, 195000);
+
+
+function Myfunction() {
+      window.location = "Enter_in_main.html";
+      document.write("Please Wait...");
+  setTimeout(Myfunction,3000); 
+    }
+ 
+//setInterval(display,300);
+
+
+  </script>
+</html>
